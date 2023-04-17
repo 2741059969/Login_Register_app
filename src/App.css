@@ -1,0 +1,17 @@
+.App{
+  
+}
+li{
+  list-style: none;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: bisque;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
