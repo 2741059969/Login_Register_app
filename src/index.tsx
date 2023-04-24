@@ -9,8 +9,10 @@ import MyContext from './global-context'
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
-axios.defaults.baseURL="http://116.205.131.223:8080"
-// axios.defaults.baseURL="http://localhost:8080"
+//打包时后端服务器运行地址在自己的云服务器8080端口，设置前端请求地址
+// axios.defaults.baseURL="http://116.205.131.223:8080"
+//本地开发时
+axios.defaults.baseURL="http://localhost:8080"
 root.render(
   <React.StrictMode>
     <Router>

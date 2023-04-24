@@ -4,12 +4,15 @@
   align-items: center;
   justify-content: center;
   padding: 10px;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
 }
 .root>label{
   margin: 10px 0;
+  
 }
 .loginbtn{
-  border: 2px solid black;
-  width: 100px;
+  /* background-color: yellow; */
+  border: 1px solid blue;
+  width: 80px;
+  text-align: center;
 }

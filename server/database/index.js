@@ -4,7 +4,9 @@ let db=mysql.createPool({
   host:"127.0.0.1",
   user:"root",
   password:'admin123',
-  database:"wts_project_db1"
+  database:"wts_project_db1",
+  // database:"wts_login_register_db"
+  // database:""
 })
 //查询测试数据
 // db.query('select * from users',(err,results)=>{

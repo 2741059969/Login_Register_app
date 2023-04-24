@@ -4,9 +4,15 @@
   align-items: center;
   justify-content: center;
   padding: 10px;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
   
 }
 .root>label {
   margin: 10px 0;
+}
+.registerspan{
+  width: 100px;
+  /* background-color: yellow; */
+  text-align: center;
+  border: 1px solid blue;
 }

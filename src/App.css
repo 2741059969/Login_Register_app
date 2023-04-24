@@ -1,6 +1,12 @@
 .App{
   
 }
+input{
+  border: none;
+  padding-left: 5px;
+  height: 25px;
+  border-radius: 5px;
+}
 li{
   list-style: none;
 }
@@ -9,7 +15,8 @@ li{
   padding: 0;
 }
 body{
-  background-color: bisque;
+  background-color: aliceblue;
+  /* background-color: bisque; */
 }
 a{
   text-decoration: none;

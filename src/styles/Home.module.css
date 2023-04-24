@@ -15,9 +15,12 @@
 }
 .lrnav{
   display: flex;
-  align-items: center;
-  background-color: yellow;
-  height: 15%;
+  /* align-items: center; */
+  /* border: 1px solid blue; */
+  /* background-color: yellow; */
+  height: 46px;
+
+  /* background-color: yellow; */
 }
 .title{
   text-align: center;
@@ -25,6 +28,9 @@
 }
 .lrnav>a{
   flex: 1;
+  
+  /* border: 1px solid black; */
   text-align: center;
-
+  line-height: 46px;
 }
+

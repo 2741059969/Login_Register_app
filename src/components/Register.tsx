@@ -16,6 +16,10 @@ export default function Register (props: IRegisterProps) {
       alert('注册失败，两次密码不一致')
       return
     }
+    if(! /\w{6,18}/.test(name)){
+      alert("用户名应输入6到18位字符，只能包括字母数字和下划线")
+      return
+    }
   let {data}=await axios.post('/user/register',{
     username:name,
     password
@@ -23,11 +27,12 @@ export default function Register (props: IRegisterProps) {
   
   // console.log(data);
   if(data==="注册成功"){
-    console.log(data,'两秒后跳转至登录页');
-    
-   setTimeout(() => {
+    // console.log(data,'两秒后跳转至登录页');
+    alert("注册成功，点击确定后跳转至登录页")
     navigate('/home/login')
-   }, 2000);
+  }
+  else{
+    alert("注册失败，用户名已存在")
   }
   }
   
@@ -48,10 +53,10 @@ export default function Register (props: IRegisterProps) {
   }
   return (
     <div className={`${styles.root}`}>
-      <label><span>账号:</span> <input type="text" value={name} onChange={handlename}  /> </label>
-      <label><span>密码: </span> <input type="password" value={password} onChange={handlepassword} /> </label>
-      <label><span>确认密码: </span> <input type="password" value={cfpassword}  onChange={handlecfpassword} /> </label>
-      <label><input type="submit" value="确认注册"  onClick={registerfunc}/></label>
+      <label><span>用户名:</span> <input  placeholder="请输入用户名" type="text" value={name} onChange={handlename}  /> </label>
+      <label><span>密码: </span> <input placeholder="请输入密码" type="password" value={password} onChange={handlepassword} /> </label>
+      <label><span>确认密码: </span> <input placeholder="请确认密码" type="password" value={cfpassword}  onChange={handlecfpassword} /> </label>
+      <label className={`${styles.registerspan}`}><span onClick={registerfunc} >确认注册</span></label>
       
     </div>
   );
